@@ -1,0 +1,31 @@
+@startuml
+
+node "School Office PC/Laptop" {
+[School Management System]
+database "Local SQLite Database"
+}
+
+node "Backup Storage (USB Drive)" {
+[Backup Files]
+}
+
+node "Printer" {
+[Report Printing]
+}
+
+[School Management System] --> [Report Printing] : USB/Cable Connection
+[School Management System] --> [Backup Files] : Daily Backup
+
+note right of "School Office PC/Laptop"
+Works fully offline.
+Staff can manage students,
+record fees and generate reports
+without internet access.
+end note
+
+note bottom of "Backup Storage (USB Drive)"
+Used to recover data after
+power failure or hardware issues.
+end note
+
+@enduml

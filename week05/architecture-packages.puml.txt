@@ -1,0 +1,37 @@
+@startuml
+
+package "User Interface" {
+  [Login Screen]
+  [Student Form]
+  [Fee Payment Form]
+  [Reports Screen]
+}
+
+package "Application Logic" {
+  [Authentication Service]
+  [Student Management Service]
+  [Fee Management Service]
+}
+
+package "Data Access" {
+  [Student Repository]
+  [Payment Repository]
+}
+
+package "Data Storage" {
+  database "SQLite Database"
+}
+
+[Login Screen] --> [Authentication Service]
+[Student Form] --> [Student Management Service]
+[Fee Payment Form] --> [Fee Management Service]
+[Reports Screen] --> [Student Management Service]
+
+[Authentication Service] --> [Student Repository]
+[Student Management Service] --> [Student Repository]
+[Fee Management Service] --> [Payment Repository]
+
+[Student Repository] --> [SQLite Database]
+[Payment Repository] --> [SQLite Database]
+
+@enduml
