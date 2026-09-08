@@ -1,0 +1,10 @@
+@startuml
+
+node "Depot A Laptop\n(Local Database)" as A
+node "Depot B Laptop\n(Local Database)" as B
+database "Central Database" as C
+
+A --> C : Sync when\ninternet available
+B --> C : Sync when\ninternet available
+
+@enduml
