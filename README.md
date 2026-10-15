@@ -2,7 +2,7 @@
 
 ## Student Information
 
-**Name:** Raygan Kuta
+**Name:** Raygan KUTA
 
 **Student ID:** 00271
 
@@ -118,7 +118,7 @@ The following tools were employed in assisting with the explanation, documentati
 
 ## Author
 
-**Raygan Kuta**
+**Raygan KUTA**
 
 Student ID: 00271
 
